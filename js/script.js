@@ -159,10 +159,10 @@ function generateAuthors () {
       /* add generated code to html variable */
       html = html + linkHTML;
     /* END LOOP: for each tag */
-}
     /* insert HTML of all the links into the tags wrapper */
     authorList.innerHTML = linkHTML;
   /* END LOOP: for every article: */
+}
 }
 generateAuthors();
 
