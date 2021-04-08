@@ -23,9 +23,11 @@ body {
   font-size: 16px;
   line-height: 1.7;
 }
+
 li {
   padding-right: 20px;
 }
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -36,7 +38,8 @@ li {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
-span {
+
+  span {
     text-transform: none;
     font-weight: 400;
     color: lighten($color-dark, 20%);
@@ -82,7 +85,8 @@ span {
   list-style-type: none;
   margin: 0;
   padding: 0;
-.active {
+
+  .active {
     font-weight: bold;
   }
 }
@@ -105,7 +109,8 @@ span {
 
 .post {
   display: none;
-&.active {
+
+  &.active {
     display: block;
   }
 }
@@ -116,7 +121,8 @@ span {
 
 .post-tags {
   display: flex;
-p {
+
+  p {
     margin: 0 10px 0 0;
   }
 }
