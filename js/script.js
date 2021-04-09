@@ -140,7 +140,7 @@ function tagClickHandler(event) {
   /* END LOOP: for each found tag link */
   }
   /* execute function "generateTitleLinks" with article selector as argument */
-  tagClickHandler('[data-tags~="' + tag + '"]');
+  generateTitleLinks('[data-tags~="' + tag + '"]');
 }
 
 function addClickListenersToTags(){
@@ -210,7 +210,7 @@ function authorClickHandler(event) {
   /* END LOOP: for each found tag link */
   }
   /* execute function "generateTitleLinks" with article selector as argument */
-  authorClickHandler('[data-author="' + author + '"]');
+  generateTitleLinks('[data-author="' + author + '"]');
 }
 
 function addClickListenersToAuthors(){
