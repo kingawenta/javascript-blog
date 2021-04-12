@@ -71,7 +71,9 @@ function generateTitleLinks(customSelector = '') {
     /* get the title from the title element */
 
     /* create HTML of the link */
-    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+    //const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+    const linkHTMLData = {id: articleId, title: articleTitle};
+    const linkHTML = templates.articleLink(linkHTMLData);
     //console.log(linkHTML);
     /* insert link into titleList */
     html = html + linkHTML;
@@ -129,9 +131,9 @@ function generateTags(){
     /* START LOOP: for each tag */
     for (let tag of articleTagsArray){
       /* generate HTML of the link */
-      const tagLinkHTML = '<li><a href="#tag-' + tag + '"><span>' + tag + '</span></a></li>';
-      //const linkHTMLData = {id:tag};
-      //const tagLinkHTML = templates.tagLink(linkHTMLData);
+      //const tagLinkHTML = '<li><a href="#tag-' + tag + '"><span>' + tag + '</span></a></li>';
+      const linkHTMLData = {id:tag};
+      const tagLinkHTML = templates.tagArticleLink(linkHTMLData);
       /* add generated code to html variable */
       html = html + tagLinkHTML;
       /* [NEW] check if this link is NOT already in allTags */
